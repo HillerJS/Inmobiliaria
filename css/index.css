@@ -175,7 +175,8 @@ background-color: orange;
     background-color: lightsalmon;
 }
 a.btn.btn-salmon.contactanos {
-    margin-top: 367px;
+    margin-top: 450px;
+
 }
 .btnbox a {
     width: 268px;
@@ -183,8 +184,10 @@ a.btn.btn-salmon.contactanos {
     text-align: center;
 }
 .ver-todas {
-    flex-direction: column;
-    justify-content: flex-end
+    margin-bottom: 1%;
+}
+.ver-todas a {
+    margin-left: calc(50% - 50px);
 }
 .contenido-contacto{
     justify-content: flex-start;
@@ -192,10 +195,10 @@ a.btn.btn-salmon.contactanos {
 }
 /* CONTACTO HOME*/
 .imagen-contacto {
+    /* position: relative; */
     background-image: url(../img/encuentra.jpg);
     background-position: center center;
     background-size: cover;
-    /* height: 640px; */
     height: 100vh;
 }
 .contenido-contacto {
@@ -235,6 +238,7 @@ a.btn.btn-salmon.contactanos {
     line-height: 30px;
 }
 .footer {
+    max-width: 1200px;
     background-color: #333;
     color: #fff;
     padding: 40px 0;
@@ -244,7 +248,7 @@ a.btn.btn-salmon.contactanos {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -299,6 +303,7 @@ a.btn.btn-salmon.contactanos {
 /* Responsivo */
 @media (max-width: 768px) {
     .footer-container {
+        max-width: 100%;
         flex-direction: column;
         align-items: center;
     }
