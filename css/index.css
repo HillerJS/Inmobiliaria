@@ -81,10 +81,58 @@ img {
 .navegacion a :last-of-type{
     margin: 0;
 } /*Esto es para que comience el margen desde la posicion 0 -- Practica integracion 2*/
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navegacion {
+        display: none;
+        flex-direction: column;
+        width: 90%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: transparent;
+        text-align: center;
+        opacity: 1;
+        z-index: 100;
+        margin-top: 30px;
+    }
+
+    .navegacion li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navegacion.active {
+        display: flex;
+    }
+}
+
 /*SECCION NOSOTROS*/
 .iconos-nosotros {
     display: flex;
     justify-content: space-between;
+}
+@media (max-width:768px){
+    .iconos-nosotros{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .icono {
     flex-basis: calc(33.33% - 18px);
@@ -106,15 +154,26 @@ img {
     color: lightsalmon;
     /* transform: translateY(100%); */
 }
+
+/*SECCION ANUNCIOS*/
 .contenedor-anuncios{
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width:768px){
+    .contenedor-anuncios{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .anuncio {
     flex-basis: calc(33.3% - 16px);
     border: 1px solid lightsalmon;
     background-color: #f5f5f5;
 }
+
 .contenido-anuncio {
     padding: 20px;
 }
@@ -209,10 +268,23 @@ a.btn.btn-salmon.contactanos {
     font-size:29px;
 }
 /*SECCION INFERIOR*/
+
 .seccion-inferior{
     display: flex;
     justify-content: space-between;
 }
+@media (max-width:768px){
+    .seccion-inferior{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .btn-contactanos{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .seccion-inferior .blog{
     flex-basis: 60%;
 }
